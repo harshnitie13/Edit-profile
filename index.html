@@ -316,6 +316,47 @@
         .icon-plus::before { content: "+"; }
         .icon-close::before { content: "×"; }
         .chevron::before { content: "⌄"; }
+        
+        /* Section Icons */
+        .section-icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 12px;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .icon-photos::before { content: "📸"; }
+        .icon-about::before { content: "👤"; }
+        .icon-contact::before { content: "📞"; }
+        .icon-education::before { content: "🎓"; }
+        .icon-family::before { content: "👨‍👩‍👧‍👦"; }
+        .icon-lifestyle::before { content: "🏃‍♂️"; }
+        .icon-religious::before { content: "🕉️"; }
+        .icon-preferences::before { content: "💝"; }
+        .icon-privacy::before { content: "🔒"; }
+
+        .accordion-header {
+            width: 100%;
+            height: 48px;
+            background: #f8f9fa;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 16px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            text-align: left;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+        }
     </style>
 </head>
 <body>
@@ -341,7 +382,10 @@
         <!-- Photos Section -->
         <div class="accordion-section">
             <button class="accordion-header" onclick="toggleAccordion(this)">
-                <span>Photos</span>
+                <div class="header-content">
+                    <span class="section-icon icon-photos"></span>
+                    <span>Photos</span>
+                </div>
                 <span class="chevron"></span>
             </button>
             <div class="accordion-content">
@@ -385,7 +429,10 @@
         <!-- About Me Section -->
         <div class="accordion-section">
             <button class="accordion-header" onclick="toggleAccordion(this)">
-                <span>About Me</span>
+                <div class="header-content">
+                    <span class="section-icon icon-about"></span>
+                    <span>About Me</span>
+                </div>
                 <span class="chevron"></span>
             </button>
             <div class="accordion-content">
@@ -454,7 +501,10 @@
         <!-- Contact Details Section -->
         <div class="accordion-section">
             <button class="accordion-header" onclick="toggleAccordion(this)">
-                <span>Contact Details</span>
+                <div class="header-content">
+                    <span class="section-icon icon-contact"></span>
+                    <span>Contact Details</span>
+                </div>
                 <span class="chevron"></span>
             </button>
             <div class="accordion-content">
@@ -490,7 +540,10 @@
         <!-- Education & Career Section -->
         <div class="accordion-section">
             <button class="accordion-header" onclick="toggleAccordion(this)">
-                <span>Education & Career</span>
+                <div class="header-content">
+                    <span class="section-icon icon-education"></span>
+                    <span>Education & Career</span>
+                </div>
                 <span class="chevron"></span>
             </button>
             <div class="accordion-content">
@@ -527,7 +580,10 @@
         <!-- Family Details Section -->
         <div class="accordion-section">
             <button class="accordion-header" onclick="toggleAccordion(this)">
-                <span>Family Details</span>
+                <div class="header-content">
+                    <span class="section-icon icon-family"></span>
+                    <span>Family Details</span>
+                </div>
                 <span class="chevron"></span>
             </button>
             <div class="accordion-content">
@@ -567,7 +623,10 @@
         <!-- Lifestyle & Habits Section -->
         <div class="accordion-section">
             <button class="accordion-header" onclick="toggleAccordion(this)">
-                <span>Lifestyle & Habits</span>
+                <div class="header-content">
+                    <span class="section-icon icon-lifestyle"></span>
+                    <span>Lifestyle & Habits</span>
+                </div>
                 <span class="chevron"></span>
             </button>
             <div class="accordion-content">
@@ -607,7 +666,10 @@
         <!-- Religious & Astrological Section -->
         <div class="accordion-section">
             <button class="accordion-header" onclick="toggleAccordion(this)">
-                <span>Religious & Astrological</span>
+                <div class="header-content">
+                    <span class="section-icon icon-religious"></span>
+                    <span>Religious & Astrological</span>
+                </div>
                 <span class="chevron"></span>
             </button>
             <div class="accordion-content">
@@ -659,7 +721,10 @@
         <!-- Partner Preferences Section -->
         <div class="accordion-section">
             <button class="accordion-header" onclick="toggleAccordion(this)">
-                <span>Partner Preferences</span>
+                <div class="header-content">
+                    <span class="section-icon icon-preferences"></span>
+                    <span>Partner Preferences</span>
+                </div>
                 <span class="chevron"></span>
             </button>
             <div class="accordion-content">
@@ -724,7 +789,10 @@
         <!-- Privacy Settings Section -->
         <div class="accordion-section">
             <button class="accordion-header" onclick="toggleAccordion(this)">
-                <span>Privacy Settings</span>
+                <div class="header-content">
+                    <span class="section-icon icon-privacy"></span>
+                    <span>Privacy Settings</span>
+                </div>
                 <span class="chevron"></span>
             </button>
             <div class="accordion-content">
