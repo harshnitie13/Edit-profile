@@ -328,6 +328,7 @@
             justify-content: center;
         }
         
+        .icon-ai::before { content: "✨"; }
         .icon-photos::before { content: "📸"; }
         .icon-about::before { content: "👤"; }
         .icon-contact::before { content: "📞"; }
@@ -357,6 +358,213 @@
             display: flex;
             align-items: center;
         }
+        .ai-card {
+            background: linear-gradient(135deg, #f0f8ff 0%, #e6f3ff 100%);
+            border: 1px solid #b3d9ff;
+            border-radius: 16px;
+            padding: 20px;
+            margin: 16px 0;
+            box-shadow: 0 4px 12px rgba(0, 123, 255, 0.1);
+        }
+
+        .ai-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1976d2;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        .ai-title .sparkle {
+            margin-right: 8px;
+            font-size: 20px;
+        }
+
+        .ai-subtitle {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 16px;
+            line-height: 1.4;
+        }
+
+        .ai-features {
+            margin: 16px 0;
+        }
+
+        .ai-feature {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            font-size: 13px;
+            color: #666;
+        }
+
+        .ai-feature-icon {
+            margin-right: 8px;
+            font-size: 14px;
+        }
+
+        .ai-status {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 6px;
+            padding: 8px 12px;
+            margin: 12px 0;
+            font-size: 13px;
+            color: #856404;
+            text-align: center;
+        }
+
+        .ai-cta-button {
+            width: 100%;
+            height: 48px;
+            background: linear-gradient(135deg, #1976d2 0%, #1565c0 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-bottom: 8px;
+            box-shadow: 0 2px 8px rgba(25, 118, 210, 0.3);
+            transition: all 0.2s ease;
+        }
+
+        .ai-cta-button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(25, 118, 210, 0.4);
+        }
+
+        .ai-learn-more {
+            text-align: center;
+            margin-top: 8px;
+        }
+
+        .ai-learn-more a {
+            color: #1976d2;
+            font-size: 12px;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /* AI Contextual Nudges */
+        .ai-nudge {
+            display: inline-flex;
+            align-items: center;
+            color: #1976d2;
+            font-size: 12px;
+            text-decoration: underline;
+            cursor: pointer;
+            margin-left: 8px;
+        }
+
+        .ai-nudge-icon {
+            margin-right: 4px;
+            font-size: 14px;
+        }
+
+        /* Premium Modal */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            padding: 20px;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .premium-modal {
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            max-width: 320px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .modal-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .modal-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 12px;
+        }
+
+        .modal-subtitle {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+
+        .premium-features {
+            text-align: left;
+            margin: 20px 0;
+        }
+
+        .premium-feature {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .premium-feature-icon {
+            margin-right: 12px;
+            font-size: 16px;
+            color: #1976d2;
+        }
+
+        .modal-price {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 16px 0;
+            font-size: 18px;
+            font-weight: 600;
+            color: #1976d2;
+        }
+
+        .modal-cta {
+            width: 100%;
+            height: 48px;
+            background: #1976d2;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-bottom: 12px;
+        }
+
+        .modal-close {
+            width: 100%;
+            height: 40px;
+            background: none;
+            color: #666;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -379,6 +587,55 @@
 
     <!-- Main Content -->
     <div class="main-content">
+        <!-- AI Profile Enhancement Section -->
+        <div class="accordion-section">
+            <button class="accordion-header" onclick="toggleAccordion(this)">
+                <div class="header-content">
+                    <span class="section-icon icon-ai"></span>
+                    <span>AI Profile Enhancement</span>
+                </div>
+                <span class="chevron"></span>
+            </button>
+            <div class="accordion-content active">
+                <div class="ai-card">
+                    <div class="ai-title">
+                        <span class="sparkle">✨</span>
+                        Boost Your Profile with AI
+                    </div>
+                    <div class="ai-subtitle">
+                        Let AI craft compelling descriptions, select your best photos, and highlight key strengths to get noticed faster!
+                    </div>
+                    
+                    <div class="ai-features">
+                        <div class="ai-feature">
+                            <span class="ai-feature-icon">🚀</span>
+                            AI-Powered Bio Writing
+                        </div>
+                        <div class="ai-feature">
+                            <span class="ai-feature-icon">📸</span>
+                            Photo Selection & Cropping Advice
+                        </div>
+                        <div class="ai-feature">
+                            <span class="ai-feature-icon">💡</span>
+                            Highlight Key Strengths
+                        </div>
+                    </div>
+
+                    <div class="ai-status">
+                        Your profile is 75% complete. AI can help you reach 100%!
+                    </div>
+
+                    <button class="ai-cta-button" onclick="showPremiumModal()">
+                        Enhance My Profile Now
+                    </button>
+
+                    <div class="ai-learn-more">
+                        <a onclick="showPremiumModal()">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Photos Section -->
         <div class="accordion-section">
             <button class="accordion-header" onclick="toggleAccordion(this)">
@@ -422,6 +679,13 @@
                     </div>
                 </div>
                 
+                <div style="text-align: center; margin-bottom: 8px;">
+                    <span class="ai-nudge" onclick="showPremiumModal()">
+                        <span class="ai-nudge-icon">📸</span>
+                        Get AI Photo Suggestions
+                    </span>
+                </div>
+                
                 <p class="helper-text">Upload clear, recent photos to increase your profile's visibility.</p>
             </div>
         </div>
@@ -439,7 +703,13 @@
                 <div class="form-group">
                     <label class="form-label">My Introduction / About Myself</label>
                     <textarea class="form-textarea" placeholder="Write a few lines about your personality, interests, and what you are looking for in a partner..." maxlength="500" oninput="updateCharCount(this)"></textarea>
-                    <div class="char-counter">0/500 Characters</div>
+                    <div class="char-counter">
+                        0/500 Characters
+                        <span class="ai-nudge" onclick="showPremiumModal()">
+                            <span class="ai-nudge-icon">✨</span>
+                            Generate with AI
+                        </span>
+                    </div>
                 </div>
 
                 <div class="form-group">
@@ -829,6 +1099,51 @@
     <!-- Bottom Sticky Save Button -->
     <div class="bottom-save">
         <button class="bottom-save-btn">Save Changes</button>
+    </div>
+
+    <!-- Premium Modal -->
+    <div class="modal-overlay" id="premiumModal">
+        <div class="premium-modal">
+            <span class="modal-icon">✨</span>
+            <div class="modal-title">Unlock AI Profile Enhancement</div>
+            <div class="modal-subtitle">
+                Get noticed faster with AI-powered profile optimization and premium features designed to help you find your perfect match.
+            </div>
+            
+            <div class="premium-features">
+                <div class="premium-feature">
+                    <span class="premium-feature-icon">🚀</span>
+                    AI-Generated Bio & Descriptions
+                </div>
+                <div class="premium-feature">
+                    <span class="premium-feature-icon">📸</span>
+                    Smart Photo Selection & Tips
+                </div>
+                <div class="premium-feature">
+                    <span class="premium-feature-icon">💡</span>
+                    Profile Strength Analysis
+                </div>
+                <div class="premium-feature">
+                    <span class="premium-feature-icon">⭐</span>
+                    Priority in Search Results
+                </div>
+                <div class="premium-feature">
+                    <span class="premium-feature-icon">💬</span>
+                    Unlimited Messages
+                </div>
+            </div>
+
+            <div class="modal-price">
+                Premium Plan - ₹2,999/month
+            </div>
+
+            <button class="modal-cta" onclick="upgradeToPremium()">
+                Upgrade to Premium
+            </button>
+            <button class="modal-close" onclick="closePremiumModal()">
+                Maybe Later
+            </button>
+        </div>
     </div>
 
     <script>
